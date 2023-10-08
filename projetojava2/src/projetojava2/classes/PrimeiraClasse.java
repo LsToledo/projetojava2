@@ -26,16 +26,21 @@ public class PrimeiraClasse {
 		Aluno aluno2 = new Aluno();
 		aluno2.nome= "Esther";
 		aluno2.sobrenome= "Toledo";
-		aluno2.setNota1(50);
-		aluno2.setNota2(20);
-		aluno2.setNota3(30);
+		aluno2.setNota1(90);
+		aluno2.setNota2(40);
+		aluno2.setNota3(90);
 		aluno2.setNota4(60);
 		
 		System.out.println("\n\nA Nome do aluno\n\n"+ aluno1.getNome());
 		System.out.println("\n\nA media da Nota é\n\n"+ aluno1.getMediaNota());
+		System.out.println("Resultado é:"+(aluno1.getResultado()?"Aprovado":"Reprovado"));
+	
+		
 		
 		System.out.println("\n\nA Nome do aluno\n\n"+ aluno2.getNome());
 		System.out.println("\n\nA media da Nota é\n\n"+ aluno2.getMediaNota());
 		
+		
+		System.out.println("Resultado é:"+(aluno2.getResultado()?"Aprovado":"Reprovado"));
 	}
 }

@@ -28,6 +28,18 @@ public class Aluno {
 	}
 	
 	
+	public boolean getResultado() {
+		
+		double media = this.getMediaNota();
+		if(media >= 70) {
+			return true;
+		
+		}else {
+			return false;
+			
+		}
+	}
+	
 	
 	
 	public String getNomeMae() {
