@@ -23,7 +23,7 @@ public class Aluno {
 	
 	
 	
-	public getMediaNota() {
+	public double getMediaNota() {
 		return (nota1 + nota2 + nota3 + nota4)/4;
 	}
 	
