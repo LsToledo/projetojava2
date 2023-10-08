@@ -23,6 +23,17 @@ public class Aluno {
 	
 	
 	
+	
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", sobrenome=" + sobrenome + ", Id=" + Id + ", dataNacimento=" + dataNacimento
+				+ ", Ranking=" + Ranking + ", cpf=" + cpf + ", nomeMae=" + nomeMae + ", nomepai=" + nomepai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
+				+ "]";
+	}
+
+
 	public double getMediaNota() {
 		return (nota1 + nota2 + nota3 + nota4)/4;
 	}

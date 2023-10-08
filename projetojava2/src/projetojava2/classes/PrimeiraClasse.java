@@ -1,5 +1,7 @@
 package projetojava2.classes;
 
+import javax.swing.JOptionPane;
+
 public class PrimeiraClasse {
 	/**
 	 * @param args
@@ -24,12 +26,8 @@ public class PrimeiraClasse {
 		
 		
 		Aluno aluno2 = new Aluno();
-		aluno2.nome= "Esther";
-		aluno2.sobrenome= "Toledo";
-		aluno2.setNota1(90);
-		aluno2.setNota2(40);
-		aluno2.setNota3(90);
-		aluno2.setNota4(60);
+		aluno2.nome= JOptionPane.showInputDialog("Qual seu nome?");
+		aluno2.sobrenome= JOptionPane.showInputDialog("Qual seu nome?");
 		
 		System.out.println("\n\nA Nome do aluno\n\n"+ aluno1.getNome());
 		System.out.println("\n\nA media da Nota é\n\n"+ aluno1.getMediaNota());
