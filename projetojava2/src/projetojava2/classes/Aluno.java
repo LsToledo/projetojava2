@@ -1,6 +1,9 @@
 package projetojava2.classes;
 
 import java.util.Date;
+import java.util.Objects;
+
+import javax.swing.JOptionPane;
 
 public class Aluno {
 	public String nome;
@@ -144,4 +147,29 @@ public class Aluno {
 		this.nota4 = nota4;
 	}
 
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cpf, sobrenome);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return cpf == other.cpf && Objects.equals(sobrenome, other.sobrenome);
+	}
+
+
+
+
+	
+	
+	
 }
