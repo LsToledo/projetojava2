@@ -42,14 +42,14 @@ public class PrimeiraClasse {
 		}
 			int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover uma materia?");
 			if(escolha==0) {
-				String h1= (JOptionPane.showInputDialog(null, "Qual diciplina? 1, 2, 3, 4?"));
+				int h1 = Integer.parseInt(JOptionPane.showInputDialog("QUal diciplina quer remover? 1, 2, 3, 4..."));
 				aluno.getDiciplinas().remove(Integer.valueOf(h1).intValue());
 			}
 		
 
 		System.out.println(aluno.toString());
 		System.out.println("Media:"+aluno.getMediaNota());
-		System.out.println(aluno.getResultado()?"Aprovado": "Reprovado");
+		System.out.println(aluno.getResultado());
 
 	}
 

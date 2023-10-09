@@ -44,13 +44,19 @@ public class Aluno {
 		}
 		return somaNotas / diciplinas.size();
 	}
-	public boolean getResultado() {
-		if(getMediaNota()>=70) {
-			return true;
+	public String getResultado() {
+		double media1= getMediaNota();
+		if(media1>=50) {
+				
+			if(media1>=70) {
+				return "Aprovado";
+			}else {
+				return "Recuperaçao";
+			}
+			
 		}else {
-			return false;
+		return "Reprovado"; 
 		}
-		
 	}
 
 	public String getNomeMae() {
