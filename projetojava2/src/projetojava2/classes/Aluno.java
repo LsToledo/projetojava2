@@ -7,39 +7,44 @@ import java.util.Objects;
 
 
 	public class Aluno {
-	public String nome;
-	public String sobrenome;
-	public int Id;
-	public Date dataNacimento;
-	public int Ranking;
-	public int cpf;
-	public String nomeMae;
-	public String nomepai;
-	public String dataMatricula;
-	public String nomeEscola;
-	public String serieMatriculado;
-	public double nota1;
-	public double nota2;
-	public double nota3;
-	public double nota4;
+	private String nome;
+	private String sobrenome;
+	private int Id;
+	private Date dataNacimento;
+	private int Ranking;
+	private int cpf;
+	private String nomeMae;
+	private String nomepai;
+	private String dataMatricula;
+	private String nomeEscola;
+	private String serieMatriculado;
+
 	
+	private Diciplinas diciplinas = new Diciplinas();
 	
+
 	
-	
-	
-	
+	public Diciplinas getDiciplinas() {
+		return diciplinas;
+	}
+
+
+	public void setDiciplinas(Diciplinas diciplinas) {
+		this.diciplinas = diciplinas;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", sobrenome=" + sobrenome + ", Id=" + Id + ", dataNacimento=" + dataNacimento
 				+ ", Ranking=" + Ranking + ", cpf=" + cpf + ", nomeMae=" + nomeMae + ", nomepai=" + nomepai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
-				+ "]";
+				+ serieMatriculado + ", diciplinas=" + diciplinas + "]";
 	}
 
 
 	public double getMediaNota() {
-		return (nota1 + nota2 + nota3 + nota4)/4;
+		return (diciplinas.getNota1()+ diciplinas.getNota2()+ diciplinas.getNota3()+ diciplinas.getNota4())/4;
 	}
 	
 	
@@ -123,30 +128,7 @@ import java.util.Objects;
 	public void setRanking(int ranking) {
 		Ranking = ranking;
 	}
-	public double getNota1() {
-		return nota1;
-	}
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-	public double getNota2() {
-		return nota2;
-	}
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-	public double getNota3() {
-		return nota3;
-	}
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-	public double getNota4() {
-		return nota4;
-	}
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
-	}
+	
 
 
 	@Override
