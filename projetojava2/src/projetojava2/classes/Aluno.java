@@ -1,11 +1,12 @@
 package projetojava2.classes;
 
+
 import java.util.Date;
 import java.util.Objects;
 
-import javax.swing.JOptionPane;
 
-public class Aluno {
+
+	public class Aluno {
 	public String nome;
 	public String sobrenome;
 	public int Id;
