@@ -40,6 +40,11 @@ public class PrimeiraClasse {
 			diciplina.setNota(Double.parseDouble(notaDiciplina));
 			aluno.getDiciplinas().add(diciplina);
 		}
+			int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover uma materia?");
+			if(escolha==0) {
+				String h1= (JOptionPane.showInputDialog(null, "Qual diciplina? 1, 2, 3, 4?"));
+				aluno.getDiciplinas().remove(Integer.valueOf(h1).intValue());
+			}
 		
 
 		System.out.println(aluno.toString());
