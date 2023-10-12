@@ -1,17 +1,17 @@
 package projetojava2.classes;
 
 public class Diciplinas {
-	private String diciplina;
+	private String nomediciplina;
 	private Double nota;
 	@Override
 	public String toString() {
-		return "Diciplinas [diciplina=" + diciplina + ", nota=" + nota + "]";
+		return "Diciplinas [diciplina=" + nomediciplina + ", nota=" + nota + "]";
 	}
-	public String getDiciplina() {
-		return diciplina;
+	public String getNomeDiciplina() {
+		return nomediciplina;
 	}
 	public void setDiciplina(String diciplina) {
-		this.diciplina = diciplina;
+		this.nomediciplina = diciplina;
 	}
 	public Double getNota() {
 		return nota;

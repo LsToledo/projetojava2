@@ -26,7 +26,16 @@ public class PrimeiraClasse {
 	int cont = 0;
 
 	public static void main(String[] args) {
-		int qtd =2;
+	int op=0;
+	
+		while(op==0) {
+		int respost = Integer.parseInt(JOptionPane.showInputDialog("Deseja continuar? S=1 N=2"));
+		if(respost==2) {
+			break;
+		}else {
+		int qtd =0;
+		int per = Integer.parseInt(JOptionPane.showInputDialog("Quantos alunos deseja cadastrar?"));
+		qtd= per;
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		for (int ini = 1; ini <= qtd; ini++) {
 			Aluno aluno = new Aluno();
@@ -58,13 +67,20 @@ public class PrimeiraClasse {
 			}
 			alunos.add(aluno);
 		}
+		System.out.println("####################################################");
 		for (Aluno aluno : alunos) {
-		System.out.println(aluno.toString());
+		System.out.println(aluno.getNome());
 		System.out.println("Media:" + aluno.getMediaNota());
 		System.out.println(aluno.getResultado());
 		System.out.println("----------------------------------------------------");
+		
+		for (Diciplinas diciplinas: aluno.getDiciplinas()) {
+			System.out.println("Diciplina é: "+diciplinas.getNomeDiciplina());
+			System.out.println("Nota "+diciplinas.getNomeDiciplina()+": "+diciplinas.getNota());
+		}
+		}
 		}
 		
+		}
 	}
-
 }

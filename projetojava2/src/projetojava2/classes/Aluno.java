@@ -19,7 +19,7 @@ public class Aluno {
 	private String serieMatriculado;;
 
 	private List<Diciplinas> diciplinas = new ArrayList<Diciplinas>();
-
+		
 	public List<Diciplinas> getDiciplinas() {
 		return diciplinas;
 	}
