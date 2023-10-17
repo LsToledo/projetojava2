@@ -19,13 +19,9 @@ public class Aluno {
 	private String serieMatriculado;;
 
 	private List<Diciplinas> diciplinas = new ArrayList<Diciplinas>();
-		
+
 	public List<Diciplinas> getDiciplinas() {
 		return diciplinas;
-	}
-
-	public void setDiciplinas(List<Diciplinas> diciplinas) {
-		this.diciplinas = diciplinas;
 	}
 
 	@Override
@@ -44,18 +40,19 @@ public class Aluno {
 		}
 		return somaNotas / diciplinas.size();
 	}
+
 	public String getResultado() {
-		double media1= getMediaNota();
-		if(media1>=50) {
-				
-			if(media1>=70) {
+		double media1 = getMediaNota();
+		if (media1 >= 50) {
+
+			if (media1 >= 70) {
 				return "Aprovado";
-			}else {
+			} else {
 				return "Recuperaçao";
 			}
-			
-		}else {
-		return "Reprovado"; 
+
+		} else {
+			return "Reprovado";
 		}
 	}
 
