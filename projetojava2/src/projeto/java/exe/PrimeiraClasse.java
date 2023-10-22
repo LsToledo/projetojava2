@@ -31,7 +31,7 @@ public class PrimeiraClasse {
 		aluno.setNome(nome);
 		aluno.setSobrenome(sobrenome);
 		aluno.setId(matricula);
-		for(int pos =1; pos<=4; pos++){
+		for(int pos =0; pos<=2; pos++){
 			
 			String nomeDiciplina = JOptionPane.showInputDialog("Digite o nome da diciplina");
 			String notaDiciplina = JOptionPane.showInputDialog("Digite a nota da diciplina:"+nomeDiciplina);
@@ -47,10 +47,16 @@ public class PrimeiraClasse {
 			}
 		
 
-		System.out.println(aluno.toString());
+		System.out.println(aluno.getNome());
+		System.out.println(aluno.getSobrenome());
 		System.out.println("Media:"+aluno.getMediaNota());
 		System.out.println(aluno.getResultado()?"Aprovado": "Reprovado");
-
+		System.out.println("============================================");
+		for(int ini = 0; ini < aluno.getDiciplinas().size(); ini++) {
+		System.out.println("Diciplina: "+ aluno.getDiciplinas().get(ini).getDiciplina());
+		System.out.println("Nota: "+ aluno.getDiciplinas().get(ini).getNota());
+		System.out.println("============================================");
+		}
 	}
 
 }
