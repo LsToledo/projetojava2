@@ -5,6 +5,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import javax.swing.JOptionPane;
+
+import projeto.java.exe.PrimeiraClasse;
+
 public class Aluno {
 	private String nome;
 	private String sobrenome;
@@ -44,13 +48,14 @@ public class Aluno {
 		}
 		return somaNotas / diciplinas.size();
 	}
+
 	public boolean getResultado() {
-		if(getMediaNota()>=70) {
+		if (getMediaNota() >= 70) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
-		
+
 	}
 
 	public String getNomeMae() {
@@ -150,6 +155,7 @@ public class Aluno {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
+		
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
