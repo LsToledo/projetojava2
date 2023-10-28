@@ -7,6 +7,7 @@ import java.util.Objects;
 
 import javax.swing.JOptionPane;
 
+import cursojava.constantes.statusAluno;
 import projeto.java.exe.PrimeiraClasse;
 
 public class Aluno {
@@ -49,11 +50,14 @@ public class Aluno {
 		return somaNotas / diciplinas.size();
 	}
 
-	public boolean getResultado() {
+	public String getResultado() {
 		if (getMediaNota() >= 70) {
-			return true;
-		} else {
-			return false;
+			return statusAluno.APROVADO;
+		}
+		if(getMediaNota()>50){
+			return statusAluno.RECUPERAÇAO;
+		}else{
+			return statusAluno.REPROVADO;
 		}
 
 	}
